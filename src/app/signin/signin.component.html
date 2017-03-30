@@ -1,5 +1,5 @@
-<div> 
-  <img src="../../assets/01_splash.png" alt="" style=" min-height: 100%;
+<div>
+  <img src="../../assets/01_splash.png" alt="NetCable" style=" min-height: 100%;
     min-width: 1024px;
     width: 100%;
     height: auto;
@@ -9,8 +9,8 @@
   <app-nav></app-nav>
   <div class="flex-container">
     <md-card style="background: rgba(0,0,0,0.2);max-width:25vw;min-width: 50vw">
-      <md-card-title style="text-align: center;color: white">Sign in</md-card-title>
-      <form [formGroup]="myForms" (ngSubmit)="onSubmit(myForms.value)" style="">
+      <md-card-title style="text-align: center;font-family: lobster;color: orangered;">Sign in</md-card-title>
+      <form [formGroup]="myForms" (ngSubmit)="onSubmit(myForms.value)">
 
         <table style="width: 100%" cellspacing="0">
           <tr>
@@ -36,20 +36,21 @@
           </div>
         </table>
         <md-card-actions style="text-align: center">
-          <button md-button type="submit"  style="width: 169px;background-color: orangered;border-radius: 20px;text-align: center">Sign In</button>
+          <button md-button type="submit" style="font-family: Lobster;width: 169px;background-color: orangered;border-radius: 20px;text-align: center">Sign In</button>
         </md-card-actions>
       </form>
-      <div  style="text-align: center">
-      <button md-button style="width: 169px;background-color: #365899;border-radius: 20px;text-align: center" (click)="loginWithFacebook()">Sign In With facebook</button>
+      <div style="text-align: center">
+        <button md-button style="font-family: Lobster;width: 169px;background-color: #365899;border-radius: 20px;text-align: center"
+          (click)="loginWithFacebook()">Sign In With facebook</button>
       </div>
       <br>
-         <!--<div style="text-align: center">
+      <!--<div style="text-align: center">
       <button md-button (click)="loginWithGoogle()" style="width:198px;background-color: orangered;border-radius: 20px;">Sign In With Google</button>
       </div>-->
       <!--<br>-->
-          <div style="text-align: center">
-      <button md-button routerLink="/signup" style="background-color: white;
-    border-radius: 20px;
+      <div style="text-align: center">
+        <button md-button routerLink="/signup" style="background-color: white;
+    border-radius: 20px;font-family: Lobster;
     color: orangered;width: 169px;">Register</button>
       </div>
     </md-card>
