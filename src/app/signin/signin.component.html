@@ -1,45 +1,57 @@
-<div style="background-image: url(../../assets/01_splash.png);
-    background-size: contain;
-    height: 100vh;
-    background-position: center top;
-    background-repeat: no-repeat;
-    width: 100vw;">
+<div> 
+  <img src="../../assets/01_splash.png" alt="" style=" min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;">
   <app-nav></app-nav>
   <div class="flex-container">
-    <md-card class="row" style="width: 23%">
-      <md-card-title style="text-align: center">Sign in</md-card-title>
-      <form [formGroup]="myForms" (ngSubmit)="onSubmit(myForms.value)">
+    <md-card style="background: rgba(0,0,0,0.2);max-width:25vw;min-width: 50vw">
+      <md-card-title style="text-align: center;color: white">Sign in</md-card-title>
+      <form [formGroup]="myForms" (ngSubmit)="onSubmit(myForms.value)" style="">
 
         <table style="width: 100%" cellspacing="0">
           <tr>
             <td>
-              <md-input-container style="width: 100%">
+              <md-input-container style="width: 100%;color: white">
                 <input mdInput placeholder="Email" type="email" [formControl]="myForms.controls['email']">
               </md-input-container>
             </td>
           </tr>
-          <small *ngIf="myForms.controls['email'].hasError('required') && myForms.controls['email'].touched" class="alert alert-danger">Email address is Required</small>
+          <small style="background: transparent;" *ngIf="myForms.controls['email'].hasError('required') && myForms.controls['email'].touched"
+            class="alert alert-danger">Email address is Required</small>
           <br>
           <tr>
             <td>
-              <md-input-container style="width: 100%">
+              <md-input-container style="width: 100%;color: white">
                 <input mdInput placeholder="Password" type="password" [formControl]="myForms.controls['password']">
               </md-input-container>
             </td>
           </tr>
           <div>
-            <small *ngIf="myForms.controls['password'].hasError('required') && myForms.controls['password'].touched" class="alert alert-danger">Password is required</small>
+            <small style="background: transparent;" *ngIf="myForms.controls['password'].hasError('required') && myForms.controls['password'].touched"
+              class="alert alert-danger">Password is required</small>
           </div>
         </table>
         <md-card-actions style="text-align: center">
-          <button md-button type="submit">LOGIN</button>
+          <button md-button type="submit"  style="width: 169px;background-color: orangered;border-radius: 20px;text-align: center">Sign In</button>
         </md-card-actions>
       </form>
-      <button (click)="loginWithGoogle()">Login With Google</button>
-      
-      
-  <button (click)="loginWithFacebook()">Login With facebook</button>
-  <button (click)="overrideLogin()">Login Anonymously</button>
+      <div  style="text-align: center">
+      <button md-button style="width: 169px;background-color: #365899;border-radius: 20px;text-align: center" (click)="loginWithFacebook()">Sign In With facebook</button>
+      </div>
+      <br>
+         <!--<div style="text-align: center">
+      <button md-button (click)="loginWithGoogle()" style="width:198px;background-color: orangered;border-radius: 20px;">Sign In With Google</button>
+      </div>-->
+      <!--<br>-->
+          <div style="text-align: center">
+      <button md-button routerLink="/signup" style="background-color: white;
+    border-radius: 20px;
+    color: orangered;width: 169px;">Register</button>
+      </div>
     </md-card>
   </div>
 </div>

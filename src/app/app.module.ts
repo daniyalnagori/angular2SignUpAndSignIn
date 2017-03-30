@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { Router, Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {AuthGuardService} from './services/authGuard';
+
+//  #############    Firebase Configuration     ##############
 export const firebaseConfig = {
   apiKey: "AIzaSyBFbkzLMSqt4HDAGU_pyQGFhd3ptryoluk",
   authDomain: "webrtc2-e4e87.firebaseapp.com",
@@ -21,11 +23,14 @@ export const firebaseConfig = {
   messagingSenderId: "611425138270"
 };
 
+//  #############    AngularFire Authentication     ##############
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Google,
   method: AuthMethods.Redirect
 };
 
+
+//  ###########      Routing         ###########
 const routesConfig = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },

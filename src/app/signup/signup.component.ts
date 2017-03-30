@@ -9,18 +9,19 @@ import { AppService } from "../services/app.service";
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-  companySignup: FormGroup;
+  netCableSignUp: FormGroup;
   constructor(fb: FormBuilder, private appService: AppService) {
-    this.companySignup = fb.group({
+    // reactive form validation
+    this.netCableSignUp = fb.group({
       'email': ['', Validators.required],
       'firstName': ['', Validators.required],
       'lastName': ['', Validators.required],
       'password': ['', Validators.required],
     })
   }
-  companySignupFormSubmit(value) {
+  netCableSignupFormSubmit(value) {
     this.appService.signUpForm(value)
-    this.companySignup.reset();
+    this.netCableSignUp.reset();
   }
   ngOnInit() {
   }

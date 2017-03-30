@@ -12,7 +12,7 @@ declare var alert: any;
 export class SigninComponent implements OnInit {
   myForms: FormGroup;
   constructor(fb: FormBuilder, private af: AngularFire, private appService: AppService) {
-   this.af.auth.subscribe(auth => console.log("aaaaaaaaa",auth));
+    // reactive form
     this.myForms = fb.group({
       "email": ["", Validators.compose([Validators.required])],
       "password": ["", Validators.compose([Validators.required])],
@@ -20,22 +20,16 @@ export class SigninComponent implements OnInit {
   }
   onSubmit(value) {
     this.appService.login(value.email, value.password);
-  }
+    this.myForms.reset()
+}
   loginWithGoogle() {
     this.appService.loginWithGoogle();
   }
 
-
-
   loginWithFacebook(){
   this.appService.loginWithFacebook();
-  }
-    overrideLogin() {
-    this.af.auth.login({
-      provider: AuthProviders.Anonymous,
-      method: AuthMethods.Anonymous,
-    });
-  }
+}
+
   ngOnInit() {
   }
 

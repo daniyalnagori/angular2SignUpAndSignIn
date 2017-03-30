@@ -9,7 +9,6 @@ declare var alert: any;
 export class NavComponent implements OnInit {
 
   constructor(private af:AngularFire) { 
-     this.af.auth.subscribe(auth => console.log(auth));
   }
   ngOnInit() {
   }

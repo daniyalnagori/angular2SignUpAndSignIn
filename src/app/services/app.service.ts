@@ -10,8 +10,8 @@ export class AppService {
     }
     signUpForm(value) {
         this.af.auth.createUser({ email: value.email, password: value.password }).then((successfull) => {
-            console.log(successfull);
             alert("Successfull")
+            this.router.navigate(['/signin'])
         }).catch((err) => {
             alert(err);
         })
