@@ -1,59 +1,63 @@
 <div>
-  <img class="img" src="../../assets/01_splash.png" alt="NetCable">
+  <img class="bgImg" src="../../assets/01_splash.png" alt="NetCable">
   <app-nav></app-nav>
   <div class="flex-container" align="center">
-    <md-card class="row" style="background: rgba(0,0,0,0.2);max-width:25vw;min-width: 50vw">
-      <md-card-title style="text-align: center;font-size: 20px;color: white;
-    font-family: cursive;">Create your Account</md-card-title>
-      <form [formGroup]="netCableSignUp" (ngSubmit)="netCableSignupFormSubmit(netCableSignUp.value)">
-        <table style="width: 100%" cellspacing="0">
+    <md-card class="row" id="signUpCard">
+      <md-card-title class="signUpTitle">
+        Create your Account
+      </md-card-title>
+      <form [formGroup]="netCableSignUp " (ngSubmit)="netCableSignupFormSubmit(netCableSignUp.value) ">
+        <table style="width: 100% " cellspacing="0 ">
           <tr>
             <td>
-              <md-input-container style="width: 100%;color: white">
-                <input mdInput placeholder="Email" type="email" [formControl]="netCableSignUp.controls['email']">
+              <md-input-container style="width: 100%;color: white ">
+                <input mdInput placeholder="Email " type="email " [formControl]="netCableSignUp.controls[ 'email'] ">
 
               </md-input-container>
             </td>
           </tr>
-          <small style=" background: transparent;" *ngIf="netCableSignUp.controls['email'].hasError('required') && netCableSignUp.controls['email'].touched"
-            class="alert alert-danger">Required</small>
+          <small style=" background: transparent; " *ngIf="netCableSignUp.controls[ 'email'].hasError( 'required') && netCableSignUp.controls[
+        'email'].touched " class="alert alert-danger ">Required</small>
           <br>
           <tr>
             <td>
-              <md-input-container style="width: 100%;color: white">
-                <input mdInput placeholder="First name" type="firstName" [formControl]="netCableSignUp.controls['firstName']">
+              <md-input-container style="width: 100%;color: white ">
+                <input mdInput placeholder="First name " type="firstName " [formControl]="netCableSignUp.controls[
+        'firstName'] ">
 
               </md-input-container>
             </td>
           </tr>
-          <small style=" background: transparent;" *ngIf="netCableSignUp.controls['firstName'].hasError('required') && netCableSignUp.controls['firstName'].touched"
-            class="alert alert-danger">Required</small>
+          <small style=" background: transparent; " *ngIf="netCableSignUp.controls[ 'firstName'].hasError( 'required')
+        && netCableSignUp.controls[ 'firstName'].touched " class="alert alert-danger ">Required</small>
           <br>
           <tr>
             <td>
-              <md-input-container style="width: 100%;color: white">
-                <input mdInput placeholder="Last name" type="lastName" [formControl]="netCableSignUp.controls['lastName']">
+              <md-input-container style="width: 100%;color: white ">
+                <input mdInput placeholder="Last name " type="lastName " [formControl]="netCableSignUp.controls[
+        'lastName'] ">
 
               </md-input-container>
             </td>
           </tr>
-          <small style=" background: transparent;" *ngIf="netCableSignUp.controls['lastName'].hasError('required') && netCableSignUp.controls['lastName'].touched"
-            class="alert alert-danger">Required</small>
+          <small style=" background: transparent; " *ngIf="netCableSignUp.controls[ 'lastName'].hasError( 'required') &&
+        netCableSignUp.controls[ 'lastName'].touched " class="alert alert-danger ">Required</small>
           <br>
           <tr>
             <td>
-              <md-input-container style="width: 100%;color: white">
-                <input mdInput placeholder="Password" type="password" [formControl]="netCableSignUp.controls['password']">
+              <md-input-container style="width: 100%;color: white ">
+                <input mdInput placeholder="Password " type="password " [formControl]="netCableSignUp.controls[
+        'password'] ">
               </md-input-container>
             </td>
           </tr>
           <div>
-            <small style=" background: transparent;" *ngIf="netCableSignUp.controls['password'].hasError('required') && netCableSignUp.controls['password'].touched"
-              class="alert alert-danger">Required</small>
+            <small style=" background: transparent; " *ngIf="netCableSignUp.controls[ 'password'].hasError( 'required')
+        && netCableSignUp.controls[ 'password'].touched " class="alert alert-danger ">Required</small>
           </div>
         </table>
-        <md-card-actions style="text-align: center">
-          <button md-button type="submit" style="font-family: Lobster;">SING UP</button>
+        <md-card-actions style="text-align: center ">
+          <button md-button type="submit " style="font-family: Lobster; ">SING UP</button>
         </md-card-actions>
 
       </form>

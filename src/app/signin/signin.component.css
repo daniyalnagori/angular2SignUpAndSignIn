@@ -29,3 +29,24 @@ small {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
     box-shadow: 0 0 0px 1000px white inset;
 }
+
+.bgImg{
+     min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.signInCard{
+    background: rgba(0,0,0,0.2);
+    max-width:25vw;
+    min-width: 50vw
+}
+
+.signInTitle{
+    text-align: center;
+    font-family: lobster;
+    color: orangered
+}
